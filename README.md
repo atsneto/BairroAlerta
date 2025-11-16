@@ -1,6 +1,6 @@
 📘 BairroAlerta – Sistema de Detecção de Alertas (Protótipo)
 
-O BairroAlerta é uma aplicação composta por uma API em C# (.NET 8) e um Frontend Web, criada para simular um sistema de inteligência artificial capaz de detectar situações de risco em um bairro, como:
+O BairroAlerta é uma aplicação composta por uma API em C# (.NET 10) e um Frontend Web, criada para simular um sistema de inteligência artificial capaz de detectar situações de risco em um bairro, como:
 
 Movimentação estranha
 
