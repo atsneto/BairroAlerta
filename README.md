@@ -47,8 +47,10 @@ Live Server (VSCode)
 
 Entre na pasta da API:
 
+cd BairroAlerta-main
+cd BairroAlerta
 cd BairroAlerta.Api
-dotnet run
+dotnet run
 
 
 Ela iniciará normalmente em:
