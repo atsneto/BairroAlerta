@@ -4,7 +4,7 @@ using BairroAlerta.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// CORS liberado para o front rodando no 5500
+// Libera CORS para qualquer origem
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
@@ -15,10 +15,11 @@ builder.Services.AddCors(options =>
     });
 });
 
-// DB InMemory
+// Banco em memória
 builder.Services.AddDbContext<AlertaContext>(opt =>
     opt.UseInMemoryDatabase("BairroAlertaDB"));
 
+// Serviço que gera alertas fake
 builder.Services.AddScoped<IDetectorService, FakeDetectorService>();
 
 builder.Services.AddControllers();
@@ -27,11 +28,11 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.UseCors(); // <<< IMPORTANTE
+app.UseCors(); // Habilita CORS
 
-app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwagger(); // Docs
+app.UseSwaggerUI(); // Interface Swagger
 
-app.MapControllers();
+app.MapControllers(); // Mapeia rotas
 
-app.Run();
+app.Run(); // Inicia API
